@@ -1,6 +1,6 @@
 # Example integration pattern: Python / FastAPI
 
-One worked example of the general pattern in SKILL.md. Adapt the same shape (catalog file + pure mapper function + single central exception handler) to Django, Flask, or whatever the target project actually uses.
+One worked example of the general pattern in SKILL.md. See `references/example-python-django.md` for Django/DRF specifically; adapt the same shape (catalog file + pure mapper function + single central exception handler) to Flask or whatever else the target project actually uses.
 
 ## Files
 

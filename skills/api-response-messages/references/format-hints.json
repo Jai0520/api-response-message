@@ -1,0 +1,12 @@
+{
+  "$comment": "Per-field-type format hints appended to a templated validation message when the field's expected type/format is actually known (from the API schema/validator, not guessed). Values here are placeholders — replace with whatever format the target project's own validators actually expect; date format in particular varies per project, don't assume DD-MMM-YYYY is universal.",
+
+  "hints": {
+    "date": "Expected format: DD-MMM-YYYY (e.g. 05-Jan-2026).",
+    "email": "e.g. name@example.com",
+    "phone": "e.g. +91 98765 43210",
+    "url": "e.g. https://example.com",
+    "postalCode": "e.g. 400001",
+    "currency": "e.g. 1234.56"
+  }
+}

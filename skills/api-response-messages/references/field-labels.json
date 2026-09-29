@@ -1,0 +1,16 @@
+{
+  "$comment": "Optional glossary of raw field/key names → human-readable labels, used only where mechanical case-splitting (snake_case/camelCase/kebab-case → Title Case) would stay unclear or come out wrong. Anything not listed here falls back to mechanical splitting — extend this file with project-specific field names as they're found, don't try to enumerate every possible key up front.",
+
+  "labels": {
+    "dob": "Date of Birth",
+    "ssn": "Social Security Number",
+    "ein": "Employer Identification Number",
+    "poc_email": "Point of Contact Email",
+    "poc_phone": "Point of Contact Phone",
+    "ip": "IP Address",
+    "url": "URL",
+    "id": "ID",
+    "zip": "ZIP Code",
+    "dob_proof": "Proof of Date of Birth"
+  }
+}

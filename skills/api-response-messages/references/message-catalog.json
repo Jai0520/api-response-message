@@ -1,5 +1,5 @@
 {
-  "$comment": "Portable, language-agnostic starting catalog. Copy/seed this into the target project (translated into whatever the project's mapper module loads: JSON, YAML, a dict/object literal, etc). Extend 'patterns' with project-specific cases as they're discovered — do not hardcode them into the mapper function itself.",
+  "$comment": "Portable, language-agnostic starting catalog for the pattern-match and status-fallback tiers (see error-classification.md's Classification order). Structured field-validation errors should be handled by the field-validation template first (references/field-labels.json + references/format-hints.json), before falling through to this catalog. Copy/seed this into the target project (translated into whatever the project's mapper module loads: JSON, YAML, a dict/object literal, etc). Extend 'patterns' with project-specific cases as they're discovered — do not hardcode them into the mapper function itself.",
 
   "defaults": {
     "400": "Something about your request wasn't quite right. Please check the details and try again.",
