@@ -1,0 +1,18 @@
+{
+  "$comment": "Portable starting catalog for success/confirmation messages. Keyed by action, not pattern-matched like errors — the caller already knows which action just happened, it just needs consistent wording. Extend with project-specific actions as they're found.",
+
+  "messages": {
+    "document.upload": "Document uploaded successfully.",
+    "document.delete": "Document deleted.",
+    "document.update": "Document updated.",
+    "profile.update": "Your changes have been saved.",
+    "password.change": "Your password has been updated.",
+    "email.verify": "Your email has been verified.",
+    "account.create": "Your account has been created.",
+    "order.create": "Your order has been placed.",
+    "order.cancel": "Your order has been cancelled.",
+    "payment.success": "Payment received — your order is confirmed.",
+    "invite.send": "Invitation sent.",
+    "default": "Done."
+  }
+}

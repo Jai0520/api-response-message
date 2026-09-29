@@ -1,0 +1,74 @@
+{
+  "$comment": "Portable, language-agnostic starting catalog. Copy/seed this into the target project (translated into whatever the project's mapper module loads: JSON, YAML, a dict/object literal, etc). Extend 'patterns' with project-specific cases as they're discovered — do not hardcode them into the mapper function itself.",
+
+  "defaults": {
+    "400": "Something about your request wasn't quite right. Please check the details and try again.",
+    "401": "Your session has expired. Please sign in again.",
+    "403": "You don't have permission to do that.",
+    "404": "We couldn't find what you were looking for.",
+    "408": "That took longer than expected. Please try again.",
+    "409": "This couldn't be completed because something changed. Please refresh and try again.",
+    "413": "That file or request is too large. Please try a smaller one.",
+    "422": "Some of the information provided isn't valid. Please review and try again.",
+    "429": "You're doing that a bit too fast. Please wait a moment and try again.",
+    "500": "Something went wrong on our end. Please try again in a little while.",
+    "502": "We're having trouble reaching one of our services. Please try again shortly.",
+    "503": "This service is temporarily unavailable. Please try again later.",
+    "504": "The request took too long to complete. Please try again.",
+    "network": "We couldn't connect. Please check your connection and try again.",
+    "default": "Something unexpected happened. Please try again, and contact support if the issue continues."
+  },
+
+  "patterns": [
+    {
+      "match": "(?i)\\bs3\\b|bucket|object[- ]?storage|blob storage",
+      "userMessage": "We're having trouble storing your document right now. Please try again later.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)\\btoken\\b|unauthorized|invalid.?(credential|token)|jwt|session expired",
+      "userMessage": "Your session isn't valid anymore. Please sign in again.",
+      "retryable": false
+    },
+    {
+      "match": "(?i)time(d)? ?out|ETIMEDOUT|deadline exceeded",
+      "userMessage": "That took longer than expected. Please try again.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)connection refused|ECONNREFUSED|EHOSTUNREACH|unreachable|no route to host",
+      "userMessage": "We're having trouble connecting to one of our services. Please try again shortly.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)\\bsql\\b|database (connection|error)|deadlock|constraint violation|duplicate key",
+      "userMessage": "We're having trouble accessing data right now. Please try again later.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)validation|invalid (input|field|parameter|payload)|required field|schema mismatch",
+      "userMessage": "Some of the information provided isn't valid. Please review and try again.",
+      "retryable": false
+    },
+    {
+      "match": "(?i)rate limit|too many requests|quota exceeded",
+      "userMessage": "You're doing that a bit too fast. Please wait a moment and try again.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)out of memory|disk full|enospc",
+      "userMessage": "We're temporarily unable to process that. Please try again shortly.",
+      "retryable": true
+    },
+    {
+      "match": "(?i)permission denied|forbidden|access denied|not authorized",
+      "userMessage": "You don't have permission to do that.",
+      "retryable": false
+    },
+    {
+      "match": "(?i)not found|does not exist|no such (file|record|resource)",
+      "userMessage": "We couldn't find what you were looking for.",
+      "retryable": false
+    }
+  ]
+}

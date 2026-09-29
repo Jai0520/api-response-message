@@ -1,0 +1,14 @@
+{
+  "name": "api-response-messages",
+  "owner": {
+    "name": "Jai0520"
+  },
+  "plugins": [
+    {
+      "name": "api-response-messages",
+      "source": ".",
+      "description": "Turns raw, technical API response messages — error output (status codes, stack traces, stringified JSON, internal service errors) as well as inconsistent success/confirmation messages — into short, calm, user-safe messages fit for a frontend, and wires that translation layer into your codebase.",
+      "version": "0.1.0"
+    }
+  ]
+}

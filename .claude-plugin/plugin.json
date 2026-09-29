@@ -1,0 +1,13 @@
+{
+  "name": "api-response-messages",
+  "description": "Turns raw, technical API response messages — error output (status codes, stack traces, stringified JSON, internal service errors) as well as inconsistent success/confirmation messages — into short, calm, user-safe messages fit for a frontend, and wires that translation layer into your codebase.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jai0520",
+    "email": "jaikumarrathore2002@gmail.com"
+  },
+  "repository": "https://github.com/Jai0520/api-response-message.git",
+  "homepage": "https://github.com/Jai0520/api-response-message",
+  "license": "MIT",
+  "keywords": ["api", "errors", "error-handling", "error-messages", "success-messages", "user-friendly", "sanitize", "frontend", "backend", "claude-code-plugin"]
+}
